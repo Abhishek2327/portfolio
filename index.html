@@ -4,39 +4,414 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Heshane Garg | Portfolio</title>
+    <meta name="description" content="Heshane Garg - Python/Django Web Developer & Data Analyst. BTech CS student at IIIT Una with expertise in Django, FastAPI, Power BI, and more.">
     <link rel="stylesheet" href="stylesheet.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
+    <header class="header" id="header">
+        <a href="#home" class="logo">Portfolio<span>.</span></a>
 
-        <nav class="navbar">
-            <a href="#" style="--i:1"class="active" >Home</a>
-            <a href="#" style="--i:2" >About</a>
-            <a href="#" style="--i:3">Skill</a>
-            <a href="#" style="--i:4">Portfolio</a>
-            <a href="#" style="--i:5">Contact</a>
+        <nav class="navbar" id="navbar">
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#experience" style="--i:3">Experience</a>
+            <a href="#skills" style="--i:4">Skills</a>
+            <a href="#portfolio" style="--i:5">Projects</a>
+            <a href="#contact" style="--i:6">Contact</a>
         </nav>
+
+        <div class="menu-btn" id="menu-btn">
+            <i class='bx bx-menu'></i>
+        </div>
     </header>
-    <section class="home">
+
+    <!-- ==================== HOME ==================== -->
+    <section class="home" id="home">
         <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Havindu Hemal</h1>
+            <h3>Hello, I'm</h3>
+            <h1>Heshane Garg</h1>
             <h3>And I'm a <span class="text"></span></h3>
-            <p>I'm a web Designer with extensive experience for over 3 years.
-                <br>expertise is to create and website design, Frontend design , and many more....</p></p>
+            <p>CS student at IIIT Una passionate about building scalable backend systems and turning data into meaningful insights.</p>
             <div class="home-sci">
-                <a href="#" style="--i:7"><i class='bx bxl-facebook'></i></a>
-                <a href="#" style="--i:8"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" style="--i:9"><i class='bx bxl-whatsapp' ></i></a>
-                <a href="#" style="--i:10"><i class='bx bxl-tiktok' ></i></a>
+                <a href="#contact" style="--i:7" title="Contact Me"><i class='bx bx-phone'></i></a>
+                <a href="#contact" style="--i:8" title="Contact Me"><i class='bx bx-envelope'></i></a>
+                <a href="https://linkedin.com/in/heshane-garg-9b638a28b/" target="_blank" style="--i:9" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Heshane-11" target="_blank" style="--i:10" title="GitHub"><i class='bx bxl-github'></i></a>
             </div>
-            <a href="#" class="btn-box">More About Me</a>
+            <a href="#about" class="btn-box">More About Me</a>
+        </div>
+        <div class="home-image">
+            <div class="img-box">
+                <img src="profile.png" alt="Heshane Garg" style="width:100%; height:100%; object-fit:cover;">
             </div>
+        </div>
     </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Backend Developer &amp; Data Analyst</h3>
+                    <p>I'm a Computer Science student at IIIT Una with experience in backend development and data analytics, focusing on building scalable systems and deriving meaningful insights from data.</p>
+                    <p>I have worked with Python, SQL, and tools like Power BI for data analysis and visualization, along with developing high-performance APIs and real-time systems using modern frameworks.</p>
+                    <p>I enjoy working at the intersection of data, systems, and AI — looking for opportunities to build impactful, data-driven solutions.</p>
+                </div>
+                <div class="about-cards">
+                    <div class="about-card">
+                        <i class='bx bx-code-alt'></i>
+                        <h4>Backend Dev</h4>
+                        <p>Django, FastAPI, APIs</p>
+                    </div>
+                    <div class="about-card">
+                        <i class='bx bx-bar-chart-alt-2'></i>
+                        <h4>Data Analytics</h4>
+                        <p>Power BI, Pandas, SQL</p>
+                    </div>
+                    <div class="about-card">
+                        <i class='bx bx-book-open'></i>
+                        <h4>Education</h4>
+                        <p>BTech CS, IIIT Una</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section class="experience" id="experience">
+        <h2 class="heading">Work <span>Experience</span></h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>SWE Intern (Remote)</h3>
+                        <span class="timeline-date">April 2025 – June 2025</span>
+                    </div>
+                    <h4>Wemofy</h4>
+                    <ul>
+                        <li>Engineered a scalable <strong>Communications API</strong> using FastAPI, SQS, and Events, handling over 10K requests/day</li>
+                        <li>Built a <strong>Learning Service API</strong> that improved content delivery latency by 40%</li>
+                        <li>Developed <strong>Learning and Feedback Dashboards</strong> using Django, increasing learner engagement by 35%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="heading" style="margin-top: 4rem;">Education <span>Timeline</span></h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>BTech in Computer Science</h3>
+                        <span class="timeline-date">Aug 2023 – Present</span>
+                    </div>
+                    <h4>Indian Institute of Information Technology, Una</h4>
+                    <p>CGPA: 8.45/10 | Una, Himachal Pradesh</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Post-Matriculation (PCM)</h3>
+                        <span class="timeline-date">Apr 2022 – Mar 2023</span>
+                    </div>
+                    <h4>D.A.V Public School, Raman</h4>
+                    <p>CBSE | Percentage: 90.4% | Bathinda, Punjab</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Matriculation</h3>
+                        <span class="timeline-date">Apr 2020 – Mar 2021</span>
+                    </div>
+                    <h4>D.A.V Public School, Raman</h4>
+                    <p>CBSE | Percentage: 88.6% | Bathinda, Punjab</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="skills-grid">
+            <!-- Web Development Skills -->
+            <div class="skills-column">
+                <h3 class="title"><i class='bx bx-code-block'></i> Web Development</h3>
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>Python <span>90%</span></h3>
+                            <div class="bar"><span style="width: 90%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Django / DRF <span>85%</span></h3>
+                            <div class="bar"><span style="width: 85%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>FastAPI <span>75%</span></h3>
+                            <div class="bar"><span style="width: 75%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>HTML / CSS <span>80%</span></h3>
+                            <div class="bar"><span style="width: 80%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>SQL / PostgreSQL <span>85%</span></h3>
+                            <div class="bar"><span style="width: 85%"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Data Analytics Skills -->
+            <div class="skills-column">
+                <h3 class="title"><i class='bx bx-bar-chart-alt-2'></i> Data Analytics</h3>
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>Power BI / DAX <span>80%</span></h3>
+                            <div class="bar"><span style="width: 80%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Pandas / NumPy <span>85%</span></h3>
+                            <div class="bar"><span style="width: 85%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Matplotlib / Seaborn <span>75%</span></h3>
+                            <div class="bar"><span style="width: 75%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Excel / Tableau <span>70%</span></h3>
+                            <div class="bar"><span style="width: 70%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>MySQL <span>80%</span></h3>
+                            <div class="bar"><span style="width: 80%"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tools & Extras -->
+            <div class="skills-column">
+                <h3 class="title"><i class='bx bx-wrench'></i> Tools & Others</h3>
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>C / C++ <span>90%</span></h3>
+                            <div class="bar"><span style="width: 90%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Git / GitHub <span>85%</span></h3>
+                            <div class="bar"><span style="width: 85%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Docker / AWS <span>60%</span></h3>
+                            <div class="bar"><span style="width: 60%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Redis / Celery <span>65%</span></h3>
+                            <div class="bar"><span style="width: 65%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>WebSockets <span>70%</span></h3>
+                            <div class="bar"><span style="width: 70%"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS / PORTFOLIO ==================== -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">My <span>Projects</span></h2>
+
+        <!-- Filter Buttons -->
+        <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web Dev</button>
+            <button class="filter-btn" data-filter="data">Data Analytics</button>
+        </div>
+
+        <div class="portfolio-container">
+            <!-- Web Dev Projects -->
+            <div class="portfolio-box" data-category="web">
+                <div class="portfolio-info">
+                    <div class="project-tag web-tag">Web Dev</div>
+                    <h4>MediLok</h4>
+                    <p class="project-tech">Django, ZegoCloud SDK, Groq API, Twilio API, Gen AI</p>
+                    <p class="project-date">Jan 2026 - Mar 2026</p>
+                    <ul>
+                        <li>Real-time telemedicine platform with end-to-end consultation workflows</li>
+                        <li>2-user concurrent video sessions with sub-2s latency</li>
+                        <li>Integrated LLaMA 3.1 via Groq API processing 50+ daily health queries</li>
+                        <li>Automated communication via Twilio APIs with 95%+ delivery reliability</li>
+                    </ul>
+                    <a href="https://github.com/Heshane-11/MediLok" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-category="web">
+                <div class="portfolio-info">
+                    <div class="project-tag web-tag">Web Dev</div>
+                    <h4>BrightBuy</h4>
+                    <p class="project-tech">Django, PostgreSQL, PayPal API, WebSockets, Cloudinary</p>
+                    <p class="project-date">Aug 2025 - Nov 2025</p>
+                    <ul>
+                        <li>Scalable RESTful APIs supporting 60+ product entities</li>
+                        <li>Optimized PostgreSQL queries reducing inconsistent transaction states by 25%</li>
+                        <li>Real-time updates via WebSockets reducing redundant client polling by 90%</li>
+                    </ul>
+                    <a href="https://github.com/Heshane-11/BrightBuy-Django" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                </div>
+            </div>
+
+            <!-- Data Analytics Projects -->
+            <div class="portfolio-box" data-category="data">
+                <div class="portfolio-info">
+                    <div class="project-tag data-tag">Data Analytics</div>
+                    <h4>Reliance Sales Analysis</h4>
+                    <p class="project-tech">Power BI, DAX, Power Query, CSV</p>
+                    <p class="project-date">July 2025 - Sept 2025</p>
+                    <ul>
+                        <li>Interactive BI dashboard analyzing 10K+ sales records across 6+ attributes</li>
+                        <li>8+ dynamic visualizations with bar charts, line graphs, KPI cards, geo-maps</li>
+                        <li>DAX measures and time-series models for 12-month trends and 4-quarter performance</li>
+                    </ul>
+                    <a href="https://github.com/Heshane-11/Reliance-sales-Analysis" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-category="data">
+                <div class="portfolio-info">
+                    <div class="project-tag data-tag">Data Analytics</div>
+                    <h4>Retailytics</h4>
+                    <p class="project-tech">Python, MySQL, Pandas, SQL, Jupyter Notebook</p>
+                    <p class="project-date">Jan 2025 - Feb 2025</p>
+                    <ul>
+                        <li>Retail analytics pipeline processing 5K+ transaction records</li>
+                        <li>12+ optimized SQL queries reducing execution time by 20%</li>
+                        <li>Actionable insights on category-wise sales, customer segmentation, and trends</li>
+                    </ul>
+                    <a href="https://github.com/Heshane-11/PySQL-Sync-Streamlining-Data-Integration-between-Python-and-MySQL" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-category="data">
+                <div class="portfolio-info">
+                    <div class="project-tag data-tag">Data Analytics</div>
+                    <h4>MessageMiner</h4>
+                    <p class="project-tech">Python, Streamlit, Pandas, Matplotlib, Seaborn, NLP</p>
+                    <p class="project-date">Mar 2025 - May 2025</p>
+                    <ul>
+                        <li>Analytics pipeline transforming WhatsApp chat data into structured datasets</li>
+                        <li>Interactive Streamlit dashboard with 6+ visualizations and 12+ monthly trends</li>
+                        <li>NLP preprocessing with 500+ Hinglish stopwords, sentiment analysis with 3 classes</li>
+                    </ul>
+                    <a href="https://github.com/Heshane-11/WhatsApp-Chat-Analyzer" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ACHIEVEMENTS ==================== -->
+    <section class="achievements" id="achievements">
+        <h2 class="heading">Achievements <span>& Profiles</span></h2>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class='bx bx-code-curly'></i></div>
+                <h3><a href="https://codeforces.com/profile/heshane" target="_blank" style="color:inherit;text-decoration:none;">Codeforces Expert <i class='bx bx-link-external' style='font-size:14px;color:#0ef'></i></a></h3>
+                <p>Max rating <strong>1602</strong>. Top <strong>7% globally</strong> among 78,000+ active Indian users. Peak performance of <strong>#378</strong> in Codeforces Round 1079.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class='bx bx-code'></i></div>
+                <h3><a href="https://leetcode.com/u/Heshane-11/" target="_blank" style="color:inherit;text-decoration:none;">LeetCode Knight <i class='bx bx-link-external' style='font-size:14px;color:#0ef'></i></a></h3>
+                <p>Max rating <strong>2069</strong>. Top <strong>1.75% global rank</strong> (595 out of 41,000+). Solved 4 problems in LeetCode Weekly Contest 486.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class='bx bx-certification'></i></div>
+                <h3>Product Analytics</h3>
+                <p><a href="https://www.credly.com/badges/b972c8bb-a456-4b3a-a9eb-bf92e7056885/linked_in_profile" target="_blank" style="color:#0ef;text-decoration:none;"><strong>Product Analytics Certified</strong> <i class='bx bx-link-external' style='font-size:12px'></i></a><br>Pendo, Mind the Product</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class='bx bx-bar-chart-alt-2'></i></div>
+                <h3>Data Analytics</h3>
+                <p><a href="https://www.linkedin.com/learning/certificates/36422107ccb9138c6b05c48a6cf904f9a987d846852cb46deace0dedd88a5e50" target="_blank" style="color:#0ef;text-decoration:none;"><strong>Career Skills in Data Analytics</strong> <i class='bx bx-link-external' style='font-size:12px'></i></a><br>LinkedIn Learning</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class='bx bx-phone'></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91-7717471638</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class='bx bx-envelope'></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hishu3851@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class='bx bx-map'></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>IIIT Una, Himachal Pradesh</p>
+                    </div>
+                </div>
+            </div>
+            <form action="https://formsubmit.co/hishu3851@gmail.com" method="POST" class="contact-form">
+                <input type="hidden" name="_subject" value="New message from your Portfolio!">
+                <div class="input-box">
+                    <input type="text" name="Name" placeholder="Full Name" required>
+                    <input type="email" name="Email" placeholder="Email Address" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="Phone" placeholder="Phone Number">
+                    <input type="text" name="Subject" placeholder="Subject">
+                </div>
+                <textarea name="Message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message" class="btn-box">
+            </form>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Heshane Garg</h3>
+            <p>Python/Django Developer & Data Analyst</p>
+            <div class="footer-socials">
+                <a href="#contact"><i class='bx bx-phone'></i></a>
+                <a href="#contact"><i class='bx bx-envelope'></i></a>
+                <a href="https://linkedin.com/in/heshane-garg-9b638a28b/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Heshane-11" target="_blank"><i class='bx bxl-github'></i></a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Heshane Garg. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
