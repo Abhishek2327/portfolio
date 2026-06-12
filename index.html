@@ -14,6 +14,7 @@
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 </head>
 <body>
+    <canvas id="particles-canvas" class="particles-bg"></canvas>
     <header class="header" id="header">
         <a href="#home" class="logo">Portfolio<span>.</span></a>
 
@@ -37,7 +38,7 @@
             <h3>Hello, I'm</h3>
             <h1>Heshane Garg</h1>
             <h3>And I'm a <span class="text"></span></h3>
-            <p>CS student at IIIT Una passionate about building scalable backend systems and turning data into meaningful insights.</p>
+            <p>CS student at IIIT Una passionate about building scalable backend systems, integrating AI/ML into production applications, and turning data into meaningful insights.</p>
             <div class="home-sci">
                 <a href="#contact" style="--i:7" title="Contact Me"><i class='bx bx-phone'></i></a>
                 <a href="#contact" style="--i:8" title="Contact Me"><i class='bx bx-envelope'></i></a>
@@ -59,16 +60,21 @@
             <h2 class="heading">About <span>Me</span></h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <h3>Backend Developer &amp; Data Analyst</h3>
-                    <p>I'm a Computer Science student at IIIT Una with experience in backend development and data analytics, focusing on building scalable systems and deriving meaningful insights from data.</p>
-                    <p>I have worked with Python, SQL, and tools like Power BI for data analysis and visualization, along with developing high-performance APIs and real-time systems using modern frameworks.</p>
-                    <p>I enjoy working at the intersection of data, systems, and AI — looking for opportunities to build impactful, data-driven solutions.</p>
+                    <h3>Backend Developer · AI/ML Engineer · Data Analyst</h3>
+                    <p>I'm a Computer Science student at IIIT Una with hands-on experience in backend development, AI/ML engineering, and data analytics — building scalable, production-ready systems that combine robust infrastructure with intelligent capabilities.</p>
+                    <p>I build high-performance APIs and microservices with Python, FastAPI, and Django, and integrate <strong>LLMs</strong> (LLaMA 3.1, Gemini) via tools like <strong>LangGraph</strong> and <strong>Groq API</strong> for AI-powered workflows. I've built multimodal ML pipelines using <strong>BERT</strong>, <strong>DistilBERT</strong>, and <strong>ResNet50</strong> in production-deployed applications.</p>
+                    <p>I'm passionate about working at the intersection of <strong>AI, systems, and data</strong> — designing solutions that are not just functional but impactful and intelligent.</p>
                 </div>
                 <div class="about-cards">
                     <div class="about-card">
                         <i class='bx bx-code-alt'></i>
                         <h4>Backend Dev</h4>
-                        <p>Django, FastAPI, APIs</p>
+                        <p>Django, FastAPI, Microservices</p>
+                    </div>
+                    <div class="about-card">
+                        <i class='bx bx-brain'></i>
+                        <h4>AI / ML</h4>
+                        <p>LLMs, LangGraph, BERT, GenAI</p>
                     </div>
                     <div class="about-card">
                         <i class='bx bx-bar-chart-alt-2'></i>
@@ -148,9 +154,9 @@
     <section class="skills" id="skills">
         <h2 class="heading">My <span>Skills</span></h2>
         <div class="skills-grid">
-            <!-- Web Development Skills -->
+            <!-- Languages -->
             <div class="skills-column">
-                <h3 class="title"><i class='bx bx-code-block'></i> Web Development</h3>
+                <h3 class="title"><i class='bx bx-code-curly'></i> Languages</h3>
                 <div class="skills-box">
                     <div class="skills-content">
                         <div class="progress">
@@ -158,25 +164,65 @@
                             <div class="bar"><span style="width: 90%"></span></div>
                         </div>
                         <div class="progress">
-                            <h3>Django / DRF <span>85%</span></h3>
-                            <div class="bar"><span style="width: 85%"></span></div>
+                            <h3>C / C++ <span>90%</span></h3>
+                            <div class="bar"><span style="width: 90%"></span></div>
                         </div>
                         <div class="progress">
-                            <h3>FastAPI <span>75%</span></h3>
+                            <h3>JavaScript <span>75%</span></h3>
                             <div class="bar"><span style="width: 75%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>SQL <span>85%</span></h3>
+                            <div class="bar"><span style="width: 85%"></span></div>
                         </div>
                         <div class="progress">
                             <h3>HTML / CSS <span>80%</span></h3>
                             <div class="bar"><span style="width: 80%"></span></div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Frameworks & Tools -->
+            <div class="skills-column">
+                <h3 class="title"><i class='bx bx-layer'></i> Frameworks &amp; Tools</h3>
+                <div class="skills-box">
+                    <div class="skills-content">
                         <div class="progress">
-                            <h3>SQL / PostgreSQL <span>85%</span></h3>
+                            <h3>Django / DRF <span>85%</span></h3>
                             <div class="bar"><span style="width: 85%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>FastAPI <span>80%</span></h3>
+                            <div class="bar"><span style="width: 80%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>React.js <span>72%</span></h3>
+                            <div class="bar"><span style="width: 72%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Docker / AWS <span>75%</span></h3>
+                            <div class="bar"><span style="width: 75%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Redis / Celery <span>78%</span></h3>
+                            <div class="bar"><span style="width: 78%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>PostgreSQL / MySQL <span>85%</span></h3>
+                            <div class="bar"><span style="width: 85%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Git / GitHub <span>85%</span></h3>
+                            <div class="bar"><span style="width: 85%"></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>WebSockets <span>72%</span></h3>
+                            <div class="bar"><span style="width: 72%"></span></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Data Analytics Skills -->
+            <!-- Data Analytics -->
             <div class="skills-column">
                 <h3 class="title"><i class='bx bx-bar-chart-alt-2'></i> Data Analytics</h3>
                 <div class="skills-box">
@@ -197,37 +243,33 @@
                             <h3>Excel / Tableau <span>70%</span></h3>
                             <div class="bar"><span style="width: 70%"></span></div>
                         </div>
-                        <div class="progress">
-                            <h3>MySQL <span>80%</span></h3>
-                            <div class="bar"><span style="width: 80%"></span></div>
-                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Tools & Extras -->
+            <!-- GenAI & AI Tools -->
             <div class="skills-column">
-                <h3 class="title"><i class='bx bx-wrench'></i> Tools & Others</h3>
+                <h3 class="title"><i class='bx bx-brain'></i> GenAI &amp; AI Tools</h3>
                 <div class="skills-box">
                     <div class="skills-content">
                         <div class="progress">
-                            <h3>C / C++ <span>90%</span></h3>
-                            <div class="bar"><span style="width: 90%"></span></div>
+                            <h3>LLM Integration <span>80%</span></h3>
+                            <div class="bar"><span style="width: 80%"></span></div>
                         </div>
                         <div class="progress">
-                            <h3>Git / GitHub <span>85%</span></h3>
-                            <div class="bar"><span style="width: 85%"></span></div>
+                            <h3>Prompt Engineering <span>78%</span></h3>
+                            <div class="bar"><span style="width: 78%"></span></div>
                         </div>
                         <div class="progress">
-                            <h3>Docker / AWS <span>60%</span></h3>
-                            <div class="bar"><span style="width: 60%"></span></div>
+                            <h3>Groq API / LLaMA 3.1 <span>80%</span></h3>
+                            <div class="bar"><span style="width: 80%"></span></div>
                         </div>
                         <div class="progress">
-                            <h3>Redis / Celery <span>65%</span></h3>
-                            <div class="bar"><span style="width: 65%"></span></div>
+                            <h3>LangGraph / Agents <span>75%</span></h3>
+                            <div class="bar"><span style="width: 75%"></span></div>
                         </div>
                         <div class="progress">
-                            <h3>WebSockets <span>70%</span></h3>
-                            <div class="bar"><span style="width: 70%"></span></div>
+                            <h3>API Orchestration <span>78%</span></h3>
+                            <div class="bar"><span style="width: 78%"></span></div>
                         </div>
                     </div>
                 </div>
@@ -242,86 +284,176 @@
         <!-- Filter Buttons -->
         <div class="portfolio-filter">
             <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ai">AI / ML</button>
             <button class="filter-btn" data-filter="web">Web Dev</button>
             <button class="filter-btn" data-filter="data">Data Analytics</button>
         </div>
 
         <div class="portfolio-container">
+            <!-- AI/ML Projects -->
+            <div class="portfolio-box" data-category="ai">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-tag ai-tag">AI / ML</div>
+                        <h4>CodeCopilot</h4>
+                        <p class="project-tech">Python · FastAPI · LangGraph · Gemini API · Redis · Docker</p>
+                        <p class="project-date">Jun 2026 &ndash; Present</p>
+                        <div class="flip-hint"><i class='bx bx-rotate-right'></i> Hover to see details</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-tag ai-tag">AI / ML</div>
+                        <ul>
+                            <li>AI coding assistant via <strong>LangGraph</strong> &amp; <strong>Gemini API</strong> across <strong>1000+ source files</strong></li>
+                            <li>Scalable backend with <strong>20+ API endpoints</strong> &amp; low-latency processing</li>
+                            <li>LLM routing &amp; Prometheus monitoring — <strong>40%+ overhead reduction</strong></li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/Heshane-11/CodeCopilot" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                            <a href="https://codecopilot.onrender.com/" target="_blank" class="project-link live-link"><i class='bx bx-link-external'></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-category="ai">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-tag ai-tag">AI / ML</div>
+                        <h4>PhishFusion</h4>
+                        <p class="project-tech">FastAPI · React · BERT · DistilBERT · ResNet50 · Celery · Docker</p>
+                        <p class="project-date">Apr 2026 &ndash; Jun 2026</p>
+                        <div class="flip-hint"><i class='bx bx-rotate-right'></i> Hover to see details</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-tag ai-tag">AI / ML</div>
+                        <ul>
+                            <li>Multimodal detection via <strong>BERT, DistilBERT &amp; ResNet50</strong> with <strong>12-signal threat engine</strong></li>
+                            <li>5-service microservices with <strong>WebSocket notifications</strong> &amp; async inference</li>
+                            <li>JWT RBAC, CloudWatch, S3 &amp; PostgreSQL pooling for production</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/Heshane-11/PhishFusion" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Web Dev Projects -->
             <div class="portfolio-box" data-category="web">
-                <div class="portfolio-info">
-                    <div class="project-tag web-tag">Web Dev</div>
-                    <h4>MediLok</h4>
-                    <p class="project-tech">Django, ZegoCloud SDK, Groq API, Twilio API, Gen AI</p>
-                    <p class="project-date">Jan 2026 - Mar 2026</p>
-                    <ul>
-                        <li>Real-time telemedicine platform with end-to-end consultation workflows</li>
-                        <li>2-user concurrent video sessions with sub-2s latency</li>
-                        <li>Integrated LLaMA 3.1 via Groq API processing 50+ daily health queries</li>
-                        <li>Automated communication via Twilio APIs with 95%+ delivery reliability</li>
-                    </ul>
-                    <a href="https://github.com/Heshane-11/MediLok" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-tag web-tag">Web Dev</div>
+                        <h4>MediLok</h4>
+                        <p class="project-tech">Django · ZegoCloud SDK · Groq API · Twilio · Gen AI</p>
+                        <p class="project-date">Jan 2026 &ndash; Mar 2026</p>
+                        <div class="flip-hint"><i class='bx bx-rotate-right'></i> Hover to see details</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-tag web-tag">Web Dev</div>
+                        <ul>
+                            <li>Real-time telemedicine platform with end-to-end consultation workflows</li>
+                            <li>2-user video sessions with <strong>sub-2s latency</strong></li>
+                            <li>LLaMA 3.1 via Groq API — <strong>50+ daily health queries</strong></li>
+                            <li>Twilio APIs with <strong>95%+ delivery reliability</strong></li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/Heshane-11/MediLok" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                            <a href="https://medilok.onrender.com" target="_blank" class="project-link live-link"><i class='bx bx-link-external'></i> Live Demo</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="portfolio-box" data-category="web">
-                <div class="portfolio-info">
-                    <div class="project-tag web-tag">Web Dev</div>
-                    <h4>BrightBuy</h4>
-                    <p class="project-tech">Django, PostgreSQL, PayPal API, WebSockets, Cloudinary</p>
-                    <p class="project-date">Aug 2025 - Nov 2025</p>
-                    <ul>
-                        <li>Scalable RESTful APIs supporting 60+ product entities</li>
-                        <li>Optimized PostgreSQL queries reducing inconsistent transaction states by 25%</li>
-                        <li>Real-time updates via WebSockets reducing redundant client polling by 90%</li>
-                    </ul>
-                    <a href="https://github.com/Heshane-11/BrightBuy-Django" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-tag web-tag">Web Dev</div>
+                        <h4>BrightBuy</h4>
+                        <p class="project-tech">Django · PostgreSQL · PayPal API · WebSockets · Cloudinary</p>
+                        <p class="project-date">Aug 2025 &ndash; Nov 2025</p>
+                        <div class="flip-hint"><i class='bx bx-rotate-right'></i> Hover to see details</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-tag web-tag">Web Dev</div>
+                        <ul>
+                            <li>Scalable RESTful APIs supporting <strong>60+ product entities</strong></li>
+                            <li>PostgreSQL query optimization — <strong>25% fewer inconsistent states</strong></li>
+                            <li>WebSockets reducing redundant client polling by <strong>90%</strong></li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/Heshane-11/BrightBuy-Django" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Data Analytics Projects -->
             <div class="portfolio-box" data-category="data">
-                <div class="portfolio-info">
-                    <div class="project-tag data-tag">Data Analytics</div>
-                    <h4>Reliance Sales Analysis</h4>
-                    <p class="project-tech">Power BI, DAX, Power Query, CSV</p>
-                    <p class="project-date">July 2025 - Sept 2025</p>
-                    <ul>
-                        <li>Interactive BI dashboard analyzing 10K+ sales records across 6+ attributes</li>
-                        <li>8+ dynamic visualizations with bar charts, line graphs, KPI cards, geo-maps</li>
-                        <li>DAX measures and time-series models for 12-month trends and 4-quarter performance</li>
-                    </ul>
-                    <a href="https://github.com/Heshane-11/Reliance-sales-Analysis" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-tag data-tag">Data Analytics</div>
+                        <h4>Reliance Sales Analysis</h4>
+                        <p class="project-tech">Power BI · DAX · Power Query · CSV</p>
+                        <p class="project-date">Jul 2025 &ndash; Sep 2025</p>
+                        <div class="flip-hint"><i class='bx bx-rotate-right'></i> Hover to see details</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-tag data-tag">Data Analytics</div>
+                        <ul>
+                            <li>BI dashboard analyzing <strong>10K+ sales records</strong> across 6+ attributes</li>
+                            <li>8+ dynamic visualizations — bar charts, KPI cards, geo-maps</li>
+                            <li>DAX &amp; time-series models for <strong>12-month trends</strong></li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/Heshane-11/Reliance-sales-Analysis" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="portfolio-box" data-category="data">
-                <div class="portfolio-info">
-                    <div class="project-tag data-tag">Data Analytics</div>
-                    <h4>Retailytics</h4>
-                    <p class="project-tech">Python, MySQL, Pandas, SQL, Jupyter Notebook</p>
-                    <p class="project-date">Jan 2025 - Feb 2025</p>
-                    <ul>
-                        <li>Retail analytics pipeline processing 5K+ transaction records</li>
-                        <li>12+ optimized SQL queries reducing execution time by 20%</li>
-                        <li>Actionable insights on category-wise sales, customer segmentation, and trends</li>
-                    </ul>
-                    <a href="https://github.com/Heshane-11/PySQL-Sync-Streamlining-Data-Integration-between-Python-and-MySQL" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-tag data-tag">Data Analytics</div>
+                        <h4>Retailytics</h4>
+                        <p class="project-tech">Python · MySQL · Pandas · SQL · Jupyter</p>
+                        <p class="project-date">Jan 2025 &ndash; Feb 2025</p>
+                        <div class="flip-hint"><i class='bx bx-rotate-right'></i> Hover to see details</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-tag data-tag">Data Analytics</div>
+                        <ul>
+                            <li>Analytics pipeline processing <strong>5K+ transaction records</strong></li>
+                            <li>12+ SQL queries — <strong>20% execution time reduction</strong></li>
+                            <li>Category-wise sales, customer segmentation insights</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/Heshane-11/PySQL-Sync-Streamlining-Data-Integration-between-Python-and-MySQL" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="portfolio-box" data-category="data">
-                <div class="portfolio-info">
-                    <div class="project-tag data-tag">Data Analytics</div>
-                    <h4>MessageMiner</h4>
-                    <p class="project-tech">Python, Streamlit, Pandas, Matplotlib, Seaborn, NLP</p>
-                    <p class="project-date">Mar 2025 - May 2025</p>
-                    <ul>
-                        <li>Analytics pipeline transforming WhatsApp chat data into structured datasets</li>
-                        <li>Interactive Streamlit dashboard with 6+ visualizations and 12+ monthly trends</li>
-                        <li>NLP preprocessing with 500+ Hinglish stopwords, sentiment analysis with 3 classes</li>
-                    </ul>
-                    <a href="https://github.com/Heshane-11/WhatsApp-Chat-Analyzer" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-tag data-tag">Data Analytics</div>
+                        <h4>MessageMiner</h4>
+                        <p class="project-tech">Python · Streamlit · Pandas · Matplotlib · NLP</p>
+                        <p class="project-date">Mar 2025 &ndash; May 2025</p>
+                        <div class="flip-hint"><i class='bx bx-rotate-right'></i> Hover to see details</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-tag data-tag">Data Analytics</div>
+                        <ul>
+                            <li>WhatsApp chat data to structured analytics pipeline</li>
+                            <li>Streamlit dashboard with <strong>6+ visualizations</strong> &amp; 12+ monthly trends</li>
+                            <li>NLP with <strong>500+ Hinglish stopwords</strong> &amp; 3-class sentiment</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/Heshane-11/WhatsApp-Chat-Analyzer" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -331,15 +463,25 @@
     <section class="achievements" id="achievements">
         <h2 class="heading">Achievements <span>& Profiles</span></h2>
         <div class="achievements-grid">
-            <div class="achievement-card">
+            <!-- Codeforces Live Badge -->
+            <div class="achievement-card" id="cf-card">
                 <div class="achievement-icon"><i class='bx bx-code-curly'></i></div>
-                <h3><a href="https://codeforces.com/profile/heshane" target="_blank" style="color:inherit;text-decoration:none;">Codeforces Expert <i class='bx bx-link-external' style='font-size:14px;color:#0ef'></i></a></h3>
-                <p>Max rating <strong>1602</strong>. Top <strong>7% globally</strong> among 78,000+ active Indian users. Peak performance of <strong>#378</strong> in Codeforces Round 1079.</p>
+                <h3><a href="https://codeforces.com/profile/heshane" target="_blank" style="color:inherit;text-decoration:none;">Codeforces <span id="cf-rank-label">Expert</span> <i class='bx bx-link-external' style='font-size:14px;color:#0ef'></i></a></h3>
+                <div class="rating-badges">
+                    <span class="rating-badge cf-badge" id="cf-rating-badge">&#9733; Rating: <strong id="cf-rating">1602</strong></span>
+                    <span class="rating-badge cf-badge">&#127942; Top 7% India</span>
+                    <span class="rating-badge cf-badge">#378 in Round 1079</span>
+                </div>
             </div>
-            <div class="achievement-card">
+            <!-- LeetCode Live Badge -->
+            <div class="achievement-card" id="lc-card">
                 <div class="achievement-icon"><i class='bx bx-code'></i></div>
-                <h3><a href="https://leetcode.com/u/Heshane-11/" target="_blank" style="color:inherit;text-decoration:none;">LeetCode Knight <i class='bx bx-link-external' style='font-size:14px;color:#0ef'></i></a></h3>
-                <p>Max rating <strong>2069</strong>. Top <strong>1.75% global rank</strong> (595 out of 41,000+). Solved 4 problems in LeetCode Weekly Contest 486.</p>
+                <h3><a href="https://leetcode.com/u/Heshane-11/" target="_blank" style="color:inherit;text-decoration:none;">LeetCode <span id="lc-rank-label">Knight</span> <i class='bx bx-link-external' style='font-size:14px;color:#0ef'></i></a></h3>
+                <div class="rating-badges">
+                    <span class="rating-badge lc-badge" id="lc-rating-badge">&#9733; Rating: <strong id="lc-rating">2069</strong></span>
+                    <span class="rating-badge lc-badge">&#127942; Top 1.75% Global</span>
+                    <span class="rating-badge lc-badge">4-solve in Contest 486</span>
+                </div>
             </div>
             <div class="achievement-card">
                 <div class="achievement-icon"><i class='bx bx-certification'></i></div>
@@ -401,12 +543,16 @@
     <footer class="footer">
         <div class="footer-content">
             <h3>Heshane Garg</h3>
-            <p>Python/Django Developer & Data Analyst</p>
+            <p>Backend Developer &middot; AI/ML Engineer &middot; Data Analyst</p>
             <div class="footer-socials">
                 <a href="#contact"><i class='bx bx-phone'></i></a>
                 <a href="#contact"><i class='bx bx-envelope'></i></a>
                 <a href="https://linkedin.com/in/heshane-garg-9b638a28b/" target="_blank"><i class='bx bxl-linkedin'></i></a>
                 <a href="https://github.com/Heshane-11" target="_blank"><i class='bx bxl-github'></i></a>
+            </div>
+            <div class="visitor-counter">
+                <i class='bx bx-show'></i>
+                <span id="visitor-count">...</span> visitors
             </div>
             <p class="footer-copy">&copy; 2026 Heshane Garg. All rights reserved.</p>
         </div>

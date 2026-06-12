@@ -91,7 +91,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: #081b29;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -103,6 +103,21 @@ body {
 .home > * {
     position: relative;
     z-index: 1;
+}
+
+.particles-bg {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 1 !important;
+    pointer-events: none;
+}
+
+section, footer {
+    position: relative;
+    z-index: 2;
 }
 
 .home-content {
@@ -248,7 +263,7 @@ body {
 /* ==================== ABOUT ==================== */
 .about {
     padding: 100px 10%;
-    background: #0a1f2e;
+    background: rgba(10, 31, 46, 0.2);
 }
 
 .heading {
@@ -326,7 +341,7 @@ body {
 /* ==================== EXPERIENCE ==================== */
 .experience {
     padding: 100px 10%;
-    background: #081b29;
+    background: rgba(8, 27, 41, 0.2);
 }
 
 .timeline {
@@ -435,12 +450,12 @@ body {
 /* ==================== SKILLS ==================== */
 .skills {
     padding: 100px 10%;
-    background: #0a1f2e;
+    background: rgba(10, 31, 46, 0.2);
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 30px;
 }
 
@@ -501,7 +516,7 @@ body {
 /* ==================== PORTFOLIO ==================== */
 .portfolio {
     padding: 100px 10%;
-    background: #081b29;
+    background: rgba(8, 27, 41, 0.2);
 }
 
 .portfolio-filter {
@@ -533,22 +548,87 @@ body {
 
 .portfolio-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 25px;
 }
 
+/* ---- Flip Card ---- */
 .portfolio-box {
-    background: rgba(0, 238, 255, 0.03);
-    border: 1px solid rgba(0, 238, 255, 0.1);
+    perspective: 1000px;
+    min-height: 280px;
     border-radius: 16px;
-    overflow: hidden;
-    transition: .4s;
 }
 
-.portfolio-box:hover {
-    transform: translateY(-6px);
-    border-color: rgba(0, 238, 255, 0.3);
-    box-shadow: 0 10px 35px rgba(0, 238, 255, 0.1);
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    transform-style: preserve-3d;
+    transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 16px;
+}
+
+.portfolio-box:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 16px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.card-front {
+    background: rgba(0, 238, 255, 0.03);
+    border: 1px solid rgba(0, 238, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-back {
+    background: rgba(0, 238, 255, 0.06);
+    border: 1px solid rgba(0, 238, 255, 0.25);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    box-shadow: 0 10px 40px rgba(0, 238, 255, 0.12);
+}
+
+.card-front h4 {
+    font-size: 22px;
+    color: #fff;
+    margin: 0;
+}
+
+.card-back h4 {
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+}
+
+.flip-hint {
+    font-size: 12px;
+    color: rgba(0, 238, 255, 0.45);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: auto;
+}
+
+.flip-hint i {
+    font-size: 14px;
 }
 
 .portfolio-info {
@@ -574,6 +654,11 @@ body {
 .data-tag {
     background: rgba(168, 85, 247, 0.12);
     color: #a855f7;
+}
+
+.ai-tag {
+    background: rgba(52, 211, 153, 0.12);
+    color: #34d399;
 }
 
 .portfolio-info h4 {
@@ -617,6 +702,13 @@ body {
     color: #0ef;
 }
 
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
 .project-link {
     display: inline-flex;
     align-items: center;
@@ -636,10 +728,18 @@ body {
     font-size: 18px;
 }
 
+.live-link {
+    color: #34d399;
+}
+
+.live-link:hover {
+    color: #fff;
+}
+
 /* ==================== ACHIEVEMENTS ==================== */
 .achievements {
     padding: 100px 10%;
-    background: #0a1f2e;
+    background: rgba(10, 31, 46, 0.2);
 }
 
 .achievements-grid {
@@ -698,7 +798,7 @@ body {
 /* ==================== CONTACT ==================== */
 .contact {
     padding: 100px 10%;
-    background: #081b29;
+    background: rgba(8, 27, 41, 0.2);
 }
 
 .contact-container {
@@ -794,6 +894,61 @@ body {
     font-size: 14px;
     color: #6b8da0;
     margin-bottom: 20px;
+}
+
+/* Rating Badges */
+.rating-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.rating-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cf-badge {
+    background: rgba(30, 144, 255, 0.12);
+    color: #60a5fa;
+    border: 1px solid rgba(30, 144, 255, 0.2);
+}
+
+.lc-badge {
+    background: rgba(255, 161, 22, 0.12);
+    color: #fbbf24;
+    border: 1px solid rgba(255, 161, 22, 0.2);
+}
+
+/* Visitor Counter */
+.visitor-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin: 12px auto;
+    padding: 6px 18px;
+    background: rgba(0, 238, 255, 0.05);
+    border: 1px solid rgba(0, 238, 255, 0.12);
+    border-radius: 30px;
+    font-size: 13px;
+    color: #6b8da0;
+}
+
+.visitor-counter i {
+    color: #0ef;
+    font-size: 16px;
+}
+
+.visitor-counter span {
+    color: #0ef;
+    font-weight: 600;
 }
 
 .footer-socials {
