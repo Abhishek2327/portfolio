@@ -1,6 +1,6 @@
 // Typed.js - Typing animation
 var typed = new Typed(".text", {
-    strings: ["Python/Django Developer", "AI/ML Engineer", "Data Analyst", "Competitive Programmer", "Web Developer"],
+    strings: ["Full Stack Developer", "MERN Stack Developer", "Software Development Engineer", "Web Developer"],
     typeSpeed: 80,
     backSpeed: 60,
     backDelay: 1500,
@@ -169,8 +169,8 @@ async function fetchVisitorCount() {
 }
 
 // Run on load
-fetchCodeforcesRating();
-fetchLeetCodeRating();
+// fetchCodeforcesRating();
+// fetchLeetCodeRating();
 fetchVisitorCount();
 
 // ==================== ANIMATED PARTICLES BACKGROUND ====================
